@@ -4,7 +4,6 @@
 // -------------------------------------------------------------------------------------------------
 
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Hl7.Fhir.Model;
 using Microsoft.Health.Fhir.Tests.Common;
@@ -67,12 +66,6 @@ namespace Microsoft.Health.Fhir.Tests.E2E.Rest
 
         public Appointment Appointment { get; private set; }
 
-#if !Stu3 && !R4 && !R4B
-        public DeviceAssociation DeviceAssociation { get; private set; }
-
-        public DeviceAssociation DeviceAssociationOfNonExistentPatient { get; private set; }
-#endif
-
         internal async Task UpdatePatient(Patient patientToUpdate)
         {
             await TestFhirClient.UpdateAsync(patientToUpdate);
@@ -98,14 +91,8 @@ namespace Microsoft.Health.Fhir.Tests.E2E.Rest
             // Create resources that references the Patient resource
             Device deviceToCreate = Samples.GetJsonSample<Device>("Device-d1");
 
-#if Stu3 || R4 || R4B
             deviceToCreate.AssignPatient(new ResourceReference(patientReference));
             Device = await TestFhirClient.CreateAsync(deviceToCreate);
-#else
-            Device = await TestFhirClient.CreateAsync(deviceToCreate);
-            var deviceAssociationToCreate = Device.AssignPatient(new ResourceReference(patientReference));
-            DeviceAssociation = await TestFhirClient.CreateAsync(deviceAssociationToCreate);
-#endif
 
             // Create Patient compartment resources
             Observation observationToCreate = Samples.GetJsonSample<Observation>("Observation-For-Patient-f001");
@@ -132,14 +119,8 @@ namespace Microsoft.Health.Fhir.Tests.E2E.Rest
             NonExistentPatient = await TestFhirClient.CreateAsync(patientToCreate);
             patientReference = $"Patient/{NonExistentPatient.Id}";
 
-#if Stu3 || R4 || R4B
             deviceToCreate.AssignPatient(new ResourceReference(patientReference));
             DeviceOfNonExistentPatient = await TestFhirClient.CreateAsync(deviceToCreate);
-#else
-            DeviceOfNonExistentPatient = await TestFhirClient.CreateAsync(deviceToCreate);
-            deviceAssociationToCreate = DeviceOfNonExistentPatient.AssignPatient(new ResourceReference(patientReference));
-            DeviceAssociationOfNonExistentPatient = await TestFhirClient.CreateAsync(deviceAssociationToCreate);
-#endif
 
             observationToCreate.Subject.Reference = patientReference;
             ObservationOfNonExistentPatient = await TestFhirClient.CreateAsync(observationToCreate);

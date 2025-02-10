@@ -74,11 +74,7 @@ namespace Microsoft.Health.Fhir.Core.Features.Search
             {
                 if (_resourceTypeSearchParameter == null)
                 {
-#if Stu3 || R4 || R4B
                     _resourceTypeSearchParameter = _searchParameterDefinitionManager.GetSearchParameter(ResourceType.Resource.ToString(), SearchParameterNames.ResourceType);
-#else
-                    _resourceTypeSearchParameter = _searchParameterDefinitionManager.GetSearchParameter(KnownResourceTypes.Resource, SearchParameterNames.ResourceType);
-#endif
                 }
 
                 return _resourceTypeSearchParameter;
@@ -290,7 +286,7 @@ namespace Microsoft.Health.Fhir.Core.Features.Search
 
             // If the resource type is not specified, then the common
             // search parameters should be used.
-            string[] parsedResourceTypes = new[] { KnownResourceTypes.DomainResource };
+            ResourceType[] parsedResourceTypes = new[] { ResourceType.DomainResource };
 
             var searchExpressions = new List<Expression>();
             if (string.IsNullOrWhiteSpace(resourceType))
@@ -303,7 +299,17 @@ namespace Microsoft.Health.Fhir.Core.Features.Search
                 var resourceTypes = searchParams.Parameters
                     .Where(q => q.Item1 == KnownQueryParameterNames.Type) // <-- Equality comparison to avoid modifiers
                     .SelectMany(q => q.Item2.SplitByOrSeparator())
-                    .Where(ModelInfoProvider.IsKnownResource)
+                    .Where(type => ModelInfoProvider.IsKnownResource(type))
+                    .Select(x =>
+                    {
+                        if (!Enum.TryParse(x, out ResourceType parsedType))
+                        {
+                            // Should never get here
+                            throw new ResourceNotSupportedException(x);
+                        }
+
+                        return parsedType;
+                    })
                     .Distinct().ToList();
 
                 if (resourceTypes.Any())
@@ -313,8 +319,7 @@ namespace Microsoft.Health.Fhir.Core.Features.Search
             }
             else
             {
-                parsedResourceTypes[0] = resourceType;
-                if (!ModelInfoProvider.IsKnownResource(resourceType))
+                if (!Enum.TryParse(resourceType, out parsedResourceTypes[0]))
                 {
                     throw new ResourceNotSupportedException(resourceType);
                 }

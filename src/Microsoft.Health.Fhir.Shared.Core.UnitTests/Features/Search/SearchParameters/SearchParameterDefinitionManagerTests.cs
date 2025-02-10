@@ -310,11 +310,7 @@ namespace Microsoft.Health.Fhir.Core.UnitTests.Features.Search
             {
                 Url = "http://test/Patient-test",
                 Type = Hl7.Fhir.Model.SearchParamType.String,
-#if Stu3 || R4 || R4B
                 Base = new List<ResourceType?>() { ResourceType.Patient },
-#else
-                Base = new List<VersionIndependentResourceTypesAll?> { VersionIndependentResourceTypesAll.Patient},
-#endif
                 Expression = "Patient.Name",
                 Name = "test",
                 Code = "test",
@@ -333,28 +329,24 @@ namespace Microsoft.Health.Fhir.Core.UnitTests.Features.Search
         [Fact]
         public async Task GivenASearchParameterDefinitionManager_WhenAddingACompositeSearchParameter_ThenComponentsAreResolvedAndValidated()
         {
-#if Stu3
+            #if Stu3
             ResourceReference CreateDefinition(string reference)
             {
                 return new ResourceReference(reference);
             }
-#else
+            #else
             string CreateDefinition(string reference)
             {
                 return reference;
             }
-#endif
+            #endif
 
             // Initialize a search parameter
             var searchParam = new SearchParameter()
             {
                 Url = "http://test/Patient-test",
                 Type = Hl7.Fhir.Model.SearchParamType.Composite,
-#if Stu3 || R4 || R4B
                 Base = new List<ResourceType?>() { ResourceType.Patient },
-#else
-                Base = new List<VersionIndependentResourceTypesAll?>() { VersionIndependentResourceTypesAll.Patient },
-#endif
                 Expression = "Patient",
                 Name = "test",
                 Code = "test",
@@ -411,11 +403,7 @@ namespace Microsoft.Health.Fhir.Core.UnitTests.Features.Search
             {
                 Url = "http://test/Patient-test",
                 Type = Hl7.Fhir.Model.SearchParamType.String,
-#if Stu3 || R4 || R4B
                 Base = new List<ResourceType?>() { ResourceType.Patient },
-#else
-                Base = new List<VersionIndependentResourceTypesAll?>() { VersionIndependentResourceTypesAll.Patient },
-#endif
                 Expression = "Patient.name",
                 Name = "test",
                 Code = "test",
@@ -441,11 +429,7 @@ namespace Microsoft.Health.Fhir.Core.UnitTests.Features.Search
                 Id = "id",
                 Url = "http://test/Patient-preexisting",
                 Type = Hl7.Fhir.Model.SearchParamType.String,
-#if Stu3 || R4 || R4B
                 Base = new List<ResourceType?>() { ResourceType.Patient },
-#else
-                Base = new List<VersionIndependentResourceTypesAll?>() { VersionIndependentResourceTypesAll.Patient },
-#endif
                 Expression = "Patient.name",
                 Name = "preexisting",
                 Code = "preexisting",
@@ -457,11 +441,7 @@ namespace Microsoft.Health.Fhir.Core.UnitTests.Features.Search
                 Id = "id2",
                 Url = "http://test/Patient-preexisting2",
                 Type = Hl7.Fhir.Model.SearchParamType.String,
-#if Stu3 || R4 || R4B
                 Base = new List<ResourceType?>() { ResourceType.Patient },
-#else
-                Base = new List<VersionIndependentResourceTypesAll?>() { VersionIndependentResourceTypesAll.Patient },
-#endif
                 Expression = "Patient.name",
                 Name = "preexisting2",
                 Code = "preexisting2",
@@ -473,11 +453,7 @@ namespace Microsoft.Health.Fhir.Core.UnitTests.Features.Search
                 Id = "QuestionnaireResponse-questionnaire2",
                 Url = "http://hl7.org/fhir/SearchParameter/QuestionnaireResponse-questionnaire2",
                 Type = Hl7.Fhir.Model.SearchParamType.Reference,
-#if Stu3 || R4 || R4B
                 Base = new List<ResourceType?>() { ResourceType.QuestionnaireResponse },
-#else
-                Base = new List<VersionIndependentResourceTypesAll?>() { VersionIndependentResourceTypesAll.QuestionnaireResponse },
-#endif
                 Expression = "QuestionnaireResponse.questionnaire",
                 Name = "questionnaire2",
                 Code = "questionnaire2",
@@ -489,11 +465,7 @@ namespace Microsoft.Health.Fhir.Core.UnitTests.Features.Search
                 Id = "QuestionnaireResponse-questionnaire",
                 Url = "http://hl7.org/fhir/SearchParameter/QuestionnaireResponse-questionnaire",
                 Type = Hl7.Fhir.Model.SearchParamType.Reference,
-#if Stu3 || R4 || R4B
                 Base = new List<ResourceType?>() { ResourceType.QuestionnaireResponse },
-#else
-                Base = new List<VersionIndependentResourceTypesAll?>() { VersionIndependentResourceTypesAll.QuestionnaireResponse },
-#endif
                 Expression = "QuestionnaireResponse.questionnaire",
                 Name = "questionnaire",
                 Code = "questionnaire",

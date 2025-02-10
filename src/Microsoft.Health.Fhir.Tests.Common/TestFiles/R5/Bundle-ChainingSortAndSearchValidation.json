@@ -321,59 +321,57 @@
                         "display": "Activity-Practitioners-CU"
                     }
                 ],
-                "availability": {
-                    "availableTime": [
-                        {
-                            "daysOfWeek": [
-                                "mon"
-                            ],
-                            "availableStartTime": "08:00:00",
-                            "availableEndTime": "20:00:00"
-                        },
-                        {
-                            "daysOfWeek": [
-                                "tue"
-                            ],
-                            "availableStartTime": "08:00:00",
-                            "availableEndTime": "20:00:00"
-                        },
-                        {
-                            "daysOfWeek": [
-                                "wed"
-                            ],
-                            "availableStartTime": "08:00:00",
-                            "availableEndTime": "20:00:00"
-                        },
-                        {
-                            "daysOfWeek": [
-                                "thu"
-                            ],
-                            "availableStartTime": "08:00:00",
-                            "availableEndTime": "20:00:00"
-                        },
-                        {
-                            "daysOfWeek": [
-                                "fri"
-                            ],
-                            "availableStartTime": "08:00:00",
-                            "availableEndTime": "20:00:00"
-                        },
-                        {
-                            "daysOfWeek": [
-                                "sat"
-                            ],
-                            "availableStartTime": "10:00:00",
-                            "availableEndTime": "16:00:00"
-                        },
-                        {
-                            "daysOfWeek": [
-                                "sun"
-                            ],
-                            "availableStartTime": "10:00:00",
-                            "availableEndTime": "16:00:00"
-                        }
-                    ]
-                }
+                "availableTime": [
+                    {
+                        "daysOfWeek": [
+                            "mon"
+                        ],
+                        "availableStartTime": "08:00:00",
+                        "availableEndTime": "20:00:00"
+                    },
+                    {
+                        "daysOfWeek": [
+                            "tue"
+                        ],
+                        "availableStartTime": "08:00:00",
+                        "availableEndTime": "20:00:00"
+                    },
+                    {
+                        "daysOfWeek": [
+                            "wed"
+                        ],
+                        "availableStartTime": "08:00:00",
+                        "availableEndTime": "20:00:00"
+                    },
+                    {
+                        "daysOfWeek": [
+                            "thu"
+                        ],
+                        "availableStartTime": "08:00:00",
+                        "availableEndTime": "20:00:00"
+                    },
+                    {
+                        "daysOfWeek": [
+                            "fri"
+                        ],
+                        "availableStartTime": "08:00:00",
+                        "availableEndTime": "20:00:00"
+                    },
+                    {
+                        "daysOfWeek": [
+                            "sat"
+                        ],
+                        "availableStartTime": "10:00:00",
+                        "availableEndTime": "16:00:00"
+                    },
+                    {
+                        "daysOfWeek": [
+                            "sun"
+                        ],
+                        "availableStartTime": "10:00:00",
+                        "availableEndTime": "16:00:00"
+                    }
+                ]
             },
             "request": {
                 "method": "PUT",
@@ -451,59 +449,57 @@
                         "display": "Activity-Triage"
                     }
                 ],
-                "availability": {
-                    "availableTime": [
-                        {
-                            "daysOfWeek": [
-                                "mon"
-                            ],
-                            "availableStartTime": "08:00:00",
-                            "availableEndTime": "20:00:00"
-                        },
-                        {
-                            "daysOfWeek": [
-                                "tue"
-                            ],
-                            "availableStartTime": "08:00:00",
-                            "availableEndTime": "20:00:00"
-                        },
-                        {
-                            "daysOfWeek": [
-                                "wed"
-                            ],
-                            "availableStartTime": "08:00:00",
-                            "availableEndTime": "20:00:00"
-                        },
-                        {
-                            "daysOfWeek": [
-                                "thu"
-                            ],
-                            "availableStartTime": "08:00:00",
-                            "availableEndTime": "20:00:00"
-                        },
-                        {
-                            "daysOfWeek": [
-                                "fri"
-                            ],
-                            "availableStartTime": "08:00:00",
-                            "availableEndTime": "20:00:00"
-                        },
-                        {
-                            "daysOfWeek": [
-                                "sat"
-                            ],
-                            "availableStartTime": "10:00:00",
-                            "availableEndTime": "16:00:00"
-                        },
-                        {
-                            "daysOfWeek": [
-                                "sun"
-                            ],
-                            "availableStartTime": "10:00:00",
-                            "availableEndTime": "16:00:00"
-                        }
-                    ]
-                }
+                "availableTime": [
+                    {
+                        "daysOfWeek": [
+                            "mon"
+                        ],
+                        "availableStartTime": "08:00:00",
+                        "availableEndTime": "20:00:00"
+                    },
+                    {
+                        "daysOfWeek": [
+                            "tue"
+                        ],
+                        "availableStartTime": "08:00:00",
+                        "availableEndTime": "20:00:00"
+                    },
+                    {
+                        "daysOfWeek": [
+                            "wed"
+                        ],
+                        "availableStartTime": "08:00:00",
+                        "availableEndTime": "20:00:00"
+                    },
+                    {
+                        "daysOfWeek": [
+                            "thu"
+                        ],
+                        "availableStartTime": "08:00:00",
+                        "availableEndTime": "20:00:00"
+                    },
+                    {
+                        "daysOfWeek": [
+                            "fri"
+                        ],
+                        "availableStartTime": "08:00:00",
+                        "availableEndTime": "20:00:00"
+                    },
+                    {
+                        "daysOfWeek": [
+                            "sat"
+                        ],
+                        "availableStartTime": "10:00:00",
+                        "availableEndTime": "16:00:00"
+                    },
+                    {
+                        "daysOfWeek": [
+                            "sun"
+                        ],
+                        "availableStartTime": "10:00:00",
+                        "availableEndTime": "16:00:00"
+                    }
+                ]
             },
             "request": {
                 "method": "PUT",
@@ -581,59 +577,57 @@
                         "display": "Activity-ReQueue"
                     }
                 ],
-                "availability": {
-                    "availableTime": [
-                        {
-                            "daysOfWeek": [
-                                "mon"
-                            ],
-                            "availableStartTime": "08:00:00",
-                            "availableEndTime": "20:00:00"
-                        },
-                        {
-                            "daysOfWeek": [
-                                "tue"
-                            ],
-                            "availableStartTime": "08:00:00",
-                            "availableEndTime": "20:00:00"
-                        },
-                        {
-                            "daysOfWeek": [
-                                "wed"
-                            ],
-                            "availableStartTime": "08:00:00",
-                            "availableEndTime": "20:00:00"
-                        },
-                        {
-                            "daysOfWeek": [
-                                "thu"
-                            ],
-                            "availableStartTime": "08:00:00",
-                            "availableEndTime": "20:00:00"
-                        },
-                        {
-                            "daysOfWeek": [
-                                "fri"
-                            ],
-                            "availableStartTime": "08:00:00",
-                            "availableEndTime": "20:00:00"
-                        },
-                        {
-                            "daysOfWeek": [
-                                "sat"
-                            ],
-                            "availableStartTime": "10:00:00",
-                            "availableEndTime": "16:00:00"
-                        },
-                        {
-                            "daysOfWeek": [
-                                "sun"
-                            ],
-                            "availableStartTime": "10:00:00",
-                            "availableEndTime": "16:00:00"
-                        }
-                    ]
-                }
+                "availableTime": [
+                    {
+                        "daysOfWeek": [
+                            "mon"
+                        ],
+                        "availableStartTime": "08:00:00",
+                        "availableEndTime": "20:00:00"
+                    },
+                    {
+                        "daysOfWeek": [
+                            "tue"
+                        ],
+                        "availableStartTime": "08:00:00",
+                        "availableEndTime": "20:00:00"
+                    },
+                    {
+                        "daysOfWeek": [
+                            "wed"
+                        ],
+                        "availableStartTime": "08:00:00",
+                        "availableEndTime": "20:00:00"
+                    },
+                    {
+                        "daysOfWeek": [
+                            "thu"
+                        ],
+                        "availableStartTime": "08:00:00",
+                        "availableEndTime": "20:00:00"
+                    },
+                    {
+                        "daysOfWeek": [
+                            "fri"
+                        ],
+                        "availableStartTime": "08:00:00",
+                        "availableEndTime": "20:00:00"
+                    },
+                    {
+                        "daysOfWeek": [
+                            "sat"
+                        ],
+                        "availableStartTime": "10:00:00",
+                        "availableEndTime": "16:00:00"
+                    },
+                    {
+                        "daysOfWeek": [
+                            "sun"
+                        ],
+                        "availableStartTime": "10:00:00",
+                        "availableEndTime": "16:00:00"
+                    }
+                ]
             },
             "request": {
                 "method": "PUT",
@@ -711,59 +705,57 @@
                         "display": "Activity-Patients-CU"
                     }
                 ],
-                "availability": {
-                    "availableTime": [
-                        {
-                            "daysOfWeek": [
-                                "mon"
-                            ],
-                            "availableStartTime": "08:00:00",
-                            "availableEndTime": "20:00:00"
-                        },
-                        {
-                            "daysOfWeek": [
-                                "tue"
-                            ],
-                            "availableStartTime": "08:00:00",
-                            "availableEndTime": "20:00:00"
-                        },
-                        {
-                            "daysOfWeek": [
-                                "wed"
-                            ],
-                            "availableStartTime": "08:00:00",
-                            "availableEndTime": "20:00:00"
-                        },
-                        {
-                            "daysOfWeek": [
-                                "thu"
-                            ],
-                            "availableStartTime": "08:00:00",
-                            "availableEndTime": "20:00:00"
-                        },
-                        {
-                            "daysOfWeek": [
-                                "fri"
-                            ],
-                            "availableStartTime": "08:00:00",
-                            "availableEndTime": "20:00:00"
-                        },
-                        {
-                            "daysOfWeek": [
-                                "sat"
-                            ],
-                            "availableStartTime": "10:00:00",
-                            "availableEndTime": "16:00:00"
-                        },
-                        {
-                            "daysOfWeek": [
-                                "sun"
-                            ],
-                            "availableStartTime": "10:00:00",
-                            "availableEndTime": "16:00:00"
-                        }
-                    ]
-                }
+                "availableTime": [
+                    {
+                        "daysOfWeek": [
+                            "mon"
+                        ],
+                        "availableStartTime": "08:00:00",
+                        "availableEndTime": "20:00:00"
+                    },
+                    {
+                        "daysOfWeek": [
+                            "tue"
+                        ],
+                        "availableStartTime": "08:00:00",
+                        "availableEndTime": "20:00:00"
+                    },
+                    {
+                        "daysOfWeek": [
+                            "wed"
+                        ],
+                        "availableStartTime": "08:00:00",
+                        "availableEndTime": "20:00:00"
+                    },
+                    {
+                        "daysOfWeek": [
+                            "thu"
+                        ],
+                        "availableStartTime": "08:00:00",
+                        "availableEndTime": "20:00:00"
+                    },
+                    {
+                        "daysOfWeek": [
+                            "fri"
+                        ],
+                        "availableStartTime": "08:00:00",
+                        "availableEndTime": "20:00:00"
+                    },
+                    {
+                        "daysOfWeek": [
+                            "sat"
+                        ],
+                        "availableStartTime": "10:00:00",
+                        "availableEndTime": "16:00:00"
+                    },
+                    {
+                        "daysOfWeek": [
+                            "sun"
+                        ],
+                        "availableStartTime": "10:00:00",
+                        "availableEndTime": "16:00:00"
+                    }
+                ]
             },
             "request": {
                 "method": "PUT",
@@ -915,43 +907,37 @@
                         "display": "Critical Care 1"
                     }
                 ],
-                "availability": {
-                    "availableTime": [
-                        {
-                            "daysOfWeek": [
-                                "mon"
-                            ],
-                            "availableStartTime": "09:00:00",
-                            "availableEndTime": "18:00:00"
-                        },
-                        {
-                            "daysOfWeek": [
-                                "tue"
-                            ],
-                            "availableStartTime": "09:00:00",
-                            "availableEndTime": "18:00:00"
-                        },
-                        {
-                            "daysOfWeek": [
-                                "wed"
-                            ],
-                            "availableStartTime": "09:00:00",
-                            "availableEndTime": "18:00:00"
-                        },
-                        {
-                            "daysOfWeek": [
-                                "sat"
-                            ],
-                            "availableStartTime": "10:00:00",
-                            "availableEndTime": "16:00:00"
-                        }
-                    ],
-                    "notAvailableTime": [
-                        {
-                            "description": "Reduced capacity is available during the Christmas period"
-                        }
-                    ]
-                }
+                "availableTime": [
+                    {
+                        "daysOfWeek": [
+                            "mon"
+                        ],
+                        "availableStartTime": "09:00:00",
+                        "availableEndTime": "18:00:00"
+                    },
+                    {
+                        "daysOfWeek": [
+                            "tue"
+                        ],
+                        "availableStartTime": "09:00:00",
+                        "availableEndTime": "18:00:00"
+                    },
+                    {
+                        "daysOfWeek": [
+                            "wed"
+                        ],
+                        "availableStartTime": "09:00:00",
+                        "availableEndTime": "18:00:00"
+                    },
+                    {
+                        "daysOfWeek": [
+                            "sat"
+                        ],
+                        "availableStartTime": "10:00:00",
+                        "availableEndTime": "16:00:00"
+                    }
+                ],
+                "availabilityExceptions": "Reduced capacity is available during the Christmas period"
             },
             "request": {
                 "method": "PUT",
@@ -1095,43 +1081,37 @@
                         "display": "Critical Care 2"
                     }
                 ],
-                "availability": {
-                    "availableTime": [
-                        {
-                            "daysOfWeek": [
-                                "mon"
-                            ],
-                            "availableStartTime": "09:00:00",
-                            "availableEndTime": "18:00:00"
-                        },
-                        {
-                            "daysOfWeek": [
-                                "tue"
-                            ],
-                            "availableStartTime": "09:00:00",
-                            "availableEndTime": "18:00:00"
-                        },
-                        {
-                            "daysOfWeek": [
-                                "wed"
-                            ],
-                            "availableStartTime": "09:00:00",
-                            "availableEndTime": "18:00:00"
-                        },
-                        {
-                            "daysOfWeek": [
-                                "sat"
-                            ],
-                            "availableStartTime": "10:00:00",
-                            "availableEndTime": "16:00:00"
-                        }
-                    ],
-                    "notAvailableTime": [
-                        {
-                            "description": "Reduced capacity is available during the Christmas period"
-                        }
-                    ]
-                }
+                "availableTime": [
+                    {
+                        "daysOfWeek": [
+                            "mon"
+                        ],
+                        "availableStartTime": "09:00:00",
+                        "availableEndTime": "18:00:00"
+                    },
+                    {
+                        "daysOfWeek": [
+                            "tue"
+                        ],
+                        "availableStartTime": "09:00:00",
+                        "availableEndTime": "18:00:00"
+                    },
+                    {
+                        "daysOfWeek": [
+                            "wed"
+                        ],
+                        "availableStartTime": "09:00:00",
+                        "availableEndTime": "18:00:00"
+                    },
+                    {
+                        "daysOfWeek": [
+                            "sat"
+                        ],
+                        "availableStartTime": "10:00:00",
+                        "availableEndTime": "16:00:00"
+                    }
+                ],
+                "availabilityExceptions": "Reduced capacity is available during the Christmas period"
             },
             "request": {
                 "method": "PUT",

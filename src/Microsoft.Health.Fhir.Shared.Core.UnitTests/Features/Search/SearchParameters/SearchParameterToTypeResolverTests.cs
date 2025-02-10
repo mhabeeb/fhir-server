@@ -45,11 +45,10 @@ namespace Microsoft.Health.Fhir.Core.UnitTests.Features.Search
             }
             else
             {
-                Assert.Equal(63, types.Length);
+                Assert.Equal(61, types.Length);
             }
         }
 
-#if Stu3 || R4 || R4B  // The equivalent field has been removed from CarePlan in R5 seemingly without any replacement.
         [Fact]
         public void GivenAFhirPathExpressionWithTwoPossibleOutcomeTypes_WhenResolve_TwoTypesReturned()
         {
@@ -64,7 +63,6 @@ namespace Microsoft.Health.Fhir.Core.UnitTests.Features.Search
 
             Assert.Equal(2, results.Length);
         }
-#endif
 
         [Fact]
         public void GivenAFhirPathExpressionWithAsFunction_WhenResolvingTypes_ThenTheyAreReturnedCorrectly()

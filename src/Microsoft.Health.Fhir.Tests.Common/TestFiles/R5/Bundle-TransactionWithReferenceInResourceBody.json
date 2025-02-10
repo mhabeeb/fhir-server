@@ -106,12 +106,8 @@
                 "id": "d16e8808-cbec-4f3e-9e00-c16604f36008",
                 "status": "completed",
                 "class": {
-                    "coding": [
-                        {
-                            "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
-                            "code": "AMB"
-                        }
-                    ]
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                    "code": "AMB"
                 },
                 "type": [
                     {
@@ -214,17 +210,15 @@
                     }
                 ],
                 "name": "NEWTON-WELLESLEY HOSPITAL",
-                "contact": [
+                "address": [
                     {
-                        "address": {
-                            "line": [
-                                "2014 WASHINGTON STREET"
-                            ],
-                            "city": "NEWTON",
-                            "state": "MA",
-                            "postalCode": "02462",
-                            "country": "US"
-                        }
+                        "line": [
+                            "2014 WASHINGTON STREET"
+                        ],
+                        "city": "NEWTON",
+                        "state": "MA",
+                        "postalCode": "02462",
+                        "country": "US"
                     }
                 ]
             },

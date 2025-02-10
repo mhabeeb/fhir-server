@@ -93,6 +93,7 @@ namespace Microsoft.Health.Fhir.Core.UnitTests.Features.Search
                     if (parameterInfo.Code != "_type")
                     {
                         var converters = await GetConvertsForSearchParameters(searchParameterRow.resourceType, parameterInfo);
+
                         if (converters.All(x => x.hasConverter == false))
                         {
                             unsupported.Unsupported.Add(parameterInfo.Url);

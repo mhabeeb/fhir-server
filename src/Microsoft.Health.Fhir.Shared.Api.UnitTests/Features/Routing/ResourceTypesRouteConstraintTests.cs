@@ -31,6 +31,15 @@ namespace Microsoft.Health.Fhir.Api.UnitTests.Features.Routing
         }
 
         [Fact]
+        public async Task GivenAValidModelGetRequestWithLowerCase_WhenRouting_ThenConstraintDoesNotAcceptLower()
+        {
+            var data = await GetRouteData(HttpMethods.Get, "/observation/123");
+
+            Assert.Empty(data.Routers);
+            Assert.False(data.Values.ContainsKey(KnownActionParameterNames.ResourceType));
+        }
+
+        [Fact]
         public async Task GivenAMetadataRequest_WhenRouting_ThenConstraintIsNotPassed()
         {
             var data = await GetRouteData(HttpMethods.Get, "/metadata");

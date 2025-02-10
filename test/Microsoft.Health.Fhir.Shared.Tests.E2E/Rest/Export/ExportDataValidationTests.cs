@@ -99,12 +99,7 @@ namespace Microsoft.Health.Fhir.Tests.E2E.Rest.Export
                 var group = new FhirGroup()
                 {
                     Type = FhirGroup.GroupType.Person,
-#if Stu3 || R4 || R4B
                     Actual = true,
-#else
-                    Active = true,
-                    Membership = Group.GroupMembershipBasis.Definitional,
-#endif
                 };
 
                 var groupResponse = await _testFhirClient.CreateAsync(group);
@@ -156,16 +151,11 @@ namespace Microsoft.Health.Fhir.Tests.E2E.Rest.Export
 
             var encounter = new Encounter()
             {
-#if Stu3 || R4 || R4B
                 Status = Encounter.EncounterStatus.InProgress,
                 Class = new Coding()
                 {
                     Code = "test",
                 },
-#else
-                Status = EncounterStatus.InProgress,
-                Class = new List<CodeableConcept>() { new() { Coding = new List<Coding>() { new() { Code = "test" } } } },
-#endif
                 Subject = new ResourceReference($"{KnownResourceTypes.Patient}/{patientId}"),
             };
 
@@ -196,12 +186,7 @@ namespace Microsoft.Health.Fhir.Tests.E2E.Rest.Export
             var group = new FhirGroup()
             {
                 Type = FhirGroup.GroupType.Person,
-#if Stu3 || R4 || R4B
                 Actual = true,
-#else
-                Active = true,
-                Membership = Group.GroupMembershipBasis.Definitional,
-#endif
                 Member = new List<FhirGroup.MemberComponent>()
                 {
                     new FhirGroup.MemberComponent()
