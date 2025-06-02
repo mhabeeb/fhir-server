@@ -10,6 +10,7 @@ using EnsureThat;
 using Hl7.Fhir.ElementModel;
 using Hl7.Fhir.Serialization;
 using Hl7.FhirPath;
+using Microsoft.Health.Fhir.SourceNodeSerialization.SourceNodes;
 
 namespace Microsoft.Health.Fhir.Core.Models
 {
@@ -45,6 +46,8 @@ namespace Microsoft.Health.Fhir.Core.Models
         public string InstanceType => Instance.InstanceType;
 
         internal object ResourceInstance { get; }
+
+        internal bool IsJsonNode => ResourceInstance is IResourceNode;
 
         public ITypedElement Instance { get; }
 
