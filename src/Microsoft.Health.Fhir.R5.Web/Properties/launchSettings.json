@@ -19,23 +19,24 @@
             },
             "applicationUrl": "https://localhost:44348/"
         },
-        "SqlServer": {
-            "commandName": "Project",
-            "environmentVariables": {
-                "SqlServer:Initialize": "true",
-                "SqlServer:AllowDatabaseCreation": "true",
-                "SqlServer:SchemaOptions:AutomaticUpdatesEnabled": "true",
-                "TestAuthEnvironment:FilePath": "..//..//testauthenvironment.json",
-                "SqlServer:ConnectionString": "server=(local);Initial Catalog=FHIR_R5;Integrated Security=true;TrustServerCertificate=true",
-                "DataStore": "SqlServer",
-                "TaskHosting:Enabled": "true",
-                "TaskHosting:MaxRunningTaskCount": "2",
-                "FhirServer:Operations:Export:StorageAccountConnection": "UseDevelopmentStorage=true",
-                "FhirServer:Operations:IntegrationDataStore:StorageAccountConnection": "UseDevelopmentStorage=true",
-                "FhirServer:Operations:Import:Enabled": "true",
-                "ASPNETCORE_ENVIRONMENT": "development"
-            },
-            "applicationUrl": "https://localhost:44348/"
-        }
+       "SqlServer": {
+    "commandName": "Project",
+    "environmentVariables": {
+        "SqlServer:Initialize": "true",
+        "SqlServer:AllowDatabaseCreation": "true",
+        "SqlServer:SchemaOptions:AutomaticUpdatesEnabled": "true",
+        "TestAuthEnvironment:FilePath": "..//..//testauthenvironment.json",
+        "SqlServer:ConnectionString": "server=192.168.1.131;Initial Catalog=FHIR_R5;User Id=sa;Password=A3#Hitech112233;TrustServerCertificate=true",
+        "DataStore": "SqlServer",
+        "TaskHosting:Enabled": "true",
+        "TaskHosting:MaxRunningTaskCount": "2",
+        "FhirServer:Operations:Export:StorageAccountConnection": "UseDevelopmentStorage=true",
+        "FhirServer:Operations:IntegrationDataStore:StorageAccountConnection": "UseDevelopmentStorage=true",
+        "FhirServer:Operations:Import:Enabled": "true",
+        "ASPNETCORE_ENVIRONMENT": "development"
+    },
+    "applicationUrl": "https://localhost:44348/"
+}
+
     }
 }
