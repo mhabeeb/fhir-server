@@ -40,27 +40,22 @@ stages:
   - job: Windows_dotnet9
     pool:
       name: '$(DefaultWindowsPool)'
+      demands:
+        - ImageOverride -equals $(DefaultWindowsImage)
     steps:
     - template: ./jobs/build.yml
       parameters:
         targetBuildFramework: $(defaultBuildFramework)
         unitTest: false
         codeCoverage: true
-  - job: Windows_dotnet8
-    pool:
-      name: '$(DefaultWindowsPool)'
-    steps:
-    - template: ./jobs/build.yml
-      parameters:
-        targetBuildFramework: 'net8.0'
-  - job: Linux_dotnet6
+  - job: Linux_dotnet8
     pool:
       name: '$(DefaultLinuxPool)'
       vmImage: '$(LinuxVmImage)'
     steps:
     - template: ./jobs/build.yml
       parameters:
-        targetBuildFramework: 'net6.0'
+        targetBuildFramework: 'net8.0'
 
 - stage: BuildArtifacts
   displayName: 'Build artifacts'
@@ -95,6 +90,8 @@ stages:
   - job: Guardian
     pool:
       name: '$(DefaultWindowsPool)'
+      demands:
+        - ImageOverride -equals $(DefaultWindowsImage)
     steps:
     - template: ./jobs/analyze.yml
 
@@ -109,7 +106,6 @@ stages:
     parameters: 
       tag: $(ImageTag)
       buildPlatform: $(testDockerImagePlatforms)
-      multiplePlatforms: false
 
 - stage: provisionEnvironment
   displayName: Provision Environment

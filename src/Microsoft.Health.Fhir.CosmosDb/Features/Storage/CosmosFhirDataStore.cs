@@ -26,6 +26,7 @@ using Microsoft.Health.Extensions.DependencyInjection;
 using Microsoft.Health.Fhir.Core.Configs;
 using Microsoft.Health.Fhir.Core.Exceptions;
 using Microsoft.Health.Fhir.Core.Extensions;
+using Microsoft.Health.Fhir.Core.Features;
 using Microsoft.Health.Fhir.Core.Features.Conformance;
 using Microsoft.Health.Fhir.Core.Features.Definition;
 using Microsoft.Health.Fhir.Core.Features.Persistence;
@@ -679,7 +680,7 @@ namespace Microsoft.Health.Fhir.CosmosDb.Features.Storage
                 try
                 {
                     var prevPage = page;
-                    page = await cosmosQuery.ExecuteNextAsync(linkedTokenSource.Token);
+                    page = await _retryExceptionPolicyFactory.RetryPolicy.ExecuteAsync(() => cosmosQuery.ExecuteNextAsync(linkedTokenSource.Token));
 
                     if (mustNotExceedMaxItemCount && (page.Count + results.Count > totalDesiredCount))
                     {
